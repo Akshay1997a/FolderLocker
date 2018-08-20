@@ -1,0 +1,27 @@
+* {
+    -fx-color1 : #FF3366;
+    -fx-color2 : #252B33;
+    -fx-scuess:#22B24C;
+    -fx-info: #2F7BBD;
+    -fx-warning:#F5E625;
+    -fx-error:#FC3D39;
+}
+.mainFrame{
+    -fx-background-color: -fx-color1;
+}
+
+#but{
+    -fx-padding: 10px 15px 10px 15px;
+    -fx-background-radius: 0px;
+    -fx-background-color: -fx-color2;
+    -fx-text-fill: white;
+}
+
+.jfx-progress-bar > .track, .jfx-progress-bar > .bar {
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.jfx-progress-bar > .bar {
+    -fx-background-color: -fx-info;
+}

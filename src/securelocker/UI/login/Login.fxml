@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="securelocker.UI.login.LoginController">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="38.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" styleClass="leftPane" stylesheets="@login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <ImageView fitHeight="525.0" fitWidth="212.0" layoutX="53.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/pc.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="102.0" layoutX="135.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/data-encryption.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="350.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
+         <children>
+            <Label layoutX="31.0" layoutY="59.0" styleClass="lable" text="Password:" />
+            <PasswordField fx:id="passField" layoutX="31.0" layoutY="96.0" onAction="#openAction" prefHeight="39.0" prefWidth="212.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></PasswordField>
+            <Button layoutX="31.0" layoutY="170.0" mnemonicParsing="false" onAction="#openAction" styleClass="but" text="OPEN">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label fx:id="error" layoutX="31.0" layoutY="135.0" prefHeight="18.0" prefWidth="212.0" styleClass="error" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="66.0" layoutY="-86.0" onMouseDragged="#OnDrag" onMousePressed="#OnPressed" prefHeight="30.0" prefWidth="700.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="closeBut" layoutX="634.0" layoutY="3.0" mnemonicParsing="false" onAction="#closeBut" styleClass="titleBut" text="X" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="660.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane layoutX="-53.0" layoutY="-86.0" prefHeight="200.0" prefWidth="200.0" styleClass="titlePane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
